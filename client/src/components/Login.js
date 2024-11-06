@@ -93,7 +93,7 @@ function Login() {
   return (
     <div className="App">
       <form>
-        <h2>Sign Up</h2>
+        <h2>Login</h2>
 
         <div>
           <label>Email</label>
