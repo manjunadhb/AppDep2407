@@ -13,7 +13,7 @@ function Dashboard() {
       method: "DELETE",
     };
 
-    let url = `http://localhost:4567/deleteAccount?email=${storeObj.loginDetails.email}`;
+    let url = `${storeObj.loginDetails.email}`;
 
     let JSONData = await fetch(url, reqOptions);
 
@@ -37,9 +37,7 @@ function Dashboard() {
         Welcome to {storeObj.loginDetails.firstName}{" "}
         {storeObj.loginDetails.lastName}
       </h2>
-      <img
-        src={`http://localhost:4567/${storeObj.loginDetails.profilePic}`}
-      ></img>
+      <img src={`/${storeObj.loginDetails.profilePic}`}></img>
     </div>
   );
 }

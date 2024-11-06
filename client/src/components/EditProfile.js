@@ -26,9 +26,7 @@ function EditProfile() {
     ageInputRef.current.value = storeObj.loginDetails.age;
     emailInputRef.current.value = storeObj.loginDetails.email;
     mobileNoInputRef.current.value = storeObj.loginDetails.mobileNo;
-    setSelectedImage(
-      `http://localhost:4567/${storeObj.loginDetails.profilePic}`
-    );
+    setSelectedImage(`/${storeObj.loginDetails.profilePic}`);
   };
 
   let [selectedImage, setSelectedImage] = useState("./images/noImage.png");
@@ -51,10 +49,7 @@ function EditProfile() {
       body: dataToSend,
     };
 
-    let JSONData = await fetch(
-      "http://localhost:4567/updateProfile",
-      reqOptions
-    );
+    let JSONData = await fetch("/updateProfile", reqOptions);
 
     let JSOData = await JSONData.json();
 
